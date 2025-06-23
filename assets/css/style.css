@@ -17,6 +17,13 @@ h1, h2{
     font-family: "Dm Serif Display", serif ;
     color: #184f63;
 } 
+   
+   /*  Wildcard selector * ensures all decendats are targeted */
+.sharp-corners,
+.sharp-corners *{
+    border-radius: 0;
+}
+
 /* About section */
 #about{
     background-color: white;
