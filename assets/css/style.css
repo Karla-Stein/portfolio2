@@ -7,7 +7,7 @@
 
 /* Global styles */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins&display=swap');
 body{
     font-family: "Poppins", sans-serif;
     background-color: #a4c2d1;
@@ -15,7 +15,7 @@ body{
 
 h1, h2{
     font-family: "Dm Serif Display", serif ;
-    background-color: #184f63;
+    color: #184f63;
 } 
 /* About section */
 #about{
@@ -23,18 +23,31 @@ h1, h2{
 }
 
 
-/* Portfolio */
+/* PORTFOLIO */
 #portfolio{
     background-color: #dbdcde;
 }
 
+     /* onlt targets .card-title within the #portfolio section */
+#portfolio .card-title{
+    color: #1f7798; 
+    font-size: 1.2rem;
+}
+
+#portfolio .btn-outline-secondary:hover{
+    color: #1f7798;
+}
+  /* ensures every card has the same min height */
+#portfolio .card-text{
+    min-height: 120px;
+}
 /* Contact Section */
 #contact{
     background-color: white;
 }
 
 /* Header Section */
-
+/* hero image */
 #hero{
     background-color: #dbdcde;
     background-image: url("../images/background.webp") ;
@@ -42,4 +55,16 @@ h1, h2{
     background-position: 50% 70%;
     padding: 5% 7%;
     min-height: 500px;
+}
+
+/* MEDIA QUERIES */
+
+/* use bootstrap breakpoints for XL screens  */
+@media screen and (min-width:1200px){
+
+    /* fixes all portfolio cards being too tall on xl screens  */
+    #portfolio .card-text{
+        min-height: auto;
+    }
+    
 }
